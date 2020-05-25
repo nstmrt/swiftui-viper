@@ -1,0 +1,28 @@
+# Template information section
+name: "swiftui-viper"
+summary: "Viper template for Swift UI and abstraction coordinators"
+author: "Dmitry Shliugaev, Evgeniy Ryadovoy"
+version: "0.1.0"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# View layer
+- {name: View/ViewState.swift,  path: Code/View/view_state.swift.liquid}
+- {name: View/ViewOutput.swift, path: Code/View/view_output.swift.liquid}
+- {name: View/View.swift, path: Code/View/view.swift.liquid}
+
+# Presenter layer
+- {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
+
+# Interactor layer
+- {name: Interactor/Interacting.swift, path: Code/Interactor/interactor_protocol.swift.liquid}
+- {name: Interactor/Interactor.swift, path: Code/Interactor/interactor.swift.liquid}
+
+# Router layer
+- {name: Router/Input.swift, path: Code/Router/module_input.swift.liquid}
+- {name: Router/Output.swift, path: Code/Router/module_output.swift.liquid}
+
+# Configurator
+- {name: Configurator/Configurator.swift, path: Code/Configurator/configurator.swift.liquid}

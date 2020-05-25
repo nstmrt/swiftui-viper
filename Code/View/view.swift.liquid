@@ -1,0 +1,26 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import SwiftUI
+
+struct {{ module_info.name }}View: View {
+    let output: {{ module_info.name }}ViewOutput?
+    @ObservedObject var state: {{ module_info.name }}ViewState
+
+    var body: some View {
+        VStack {
+            Text("Hello, World!")
+        }
+    }
+}
+
+struct {{ module_info.name }}View_Previews: PreviewProvider {
+    static var previews: some View {
+        {{ module_info.name }}View(output: nil, state: {{ module_info.name }}ViewState())
+    }
+}

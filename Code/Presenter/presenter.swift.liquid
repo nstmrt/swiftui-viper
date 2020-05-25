@@ -1,0 +1,31 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import Combine
+import Foundation
+
+final class {{ module_info.name }}Presenter {
+
+    let interactor: {{ module_info.name }}Interacting
+
+    private var viewState: {{ module_info.name }}ViewState
+    private var subscriptions = Set<AnyCancellable>()
+    private let router: {{ module_info.name }}Output
+
+    init(interactor: {{ module_info.name }}Interacting,
+         viewState: {{ module_info.name }}ViewState,
+         router: {{ module_info.name }}Output) {
+        self.interactor = interactor
+        self.viewState = viewState
+        self.router = router
+    }
+}
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput {}
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}Input {}
