@@ -1,2 +1,2 @@
 # swiftui-viper
-Viper template for swift UI and abstraction coordinators
+Code generate Viper template for swift UI and abstraction coordinators
