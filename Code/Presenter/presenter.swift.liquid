@@ -11,11 +11,13 @@ import Foundation
 
 final class {{ module_info.name }}Presenter {
 
-    let interactor: {{ module_info.name }}Interacting
-
+    // MARK: Dependencies
+    private let interactor: {{ module_info.name }}Interacting
     private var viewState: {{ module_info.name }}ViewState
-    private var subscriptions = Set<AnyCancellable>()
     private let router: {{ module_info.name }}Output
+
+    // MARK: Environment
+    private var subscriptions = Set<AnyCancellable>()
 
     init(interactor: {{ module_info.name }}Interacting,
          viewState: {{ module_info.name }}ViewState,
