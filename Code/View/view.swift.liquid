@@ -9,18 +9,32 @@
 import SwiftUI
 
 struct {{ module_info.name }}View: View {
-    let output: {{ module_info.name }}ViewOutput?
-    @ObservedObject var state: {{ module_info.name }}ViewState
+    private let output: {{ module_info.name }}ViewOutput?
+    @ObservedObject private var state: {{ module_info.name }}ViewState
+
+    init(output: {{ module_info.name }}ViewOutput?, state: {{ module_info.name }}ViewState) {
+        self.output = output
+        self.state = state
+    }
 
     var body: some View {
-        VStack {
+        VStack.zeroSpacing {
             Text("Hello, World!")
         }
     }
 }
 
+// MARK: - Previews
+
 struct {{ module_info.name }}View_Previews: PreviewProvider {
     static var previews: some View {
+        Group {
+            preview.environment(\.colorScheme, .light)
+            preview.environment(\.colorScheme, .dark)
+        }
+    }
+
+    static var preview: some View {
         {{ module_info.name }}View(output: nil, state: {{ module_info.name }}ViewState())
     }
 }
