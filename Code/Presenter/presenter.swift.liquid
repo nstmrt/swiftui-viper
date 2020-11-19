@@ -21,6 +21,8 @@ final class {{ module_info.name }}Presenter {
 
     private var subscriptions = Set<AnyCancellable>()
 
+    // MARK: Init
+    
     init(interactor: {{ module_info.name }}Interacting,
          viewState: {{ module_info.name }}ViewState,
          router: {{ module_info.name }}Output) {
