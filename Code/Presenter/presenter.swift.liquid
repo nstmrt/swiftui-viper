@@ -12,12 +12,16 @@ import Foundation
 final class {{ module_info.name }}Presenter {
 
     // MARK: Dependencies
+
     private let interactor: {{ module_info.name }}Interacting
-    private var viewState: {{ module_info.name }}ViewState
+    private let viewState: {{ module_info.name }}ViewState
     private let router: {{ module_info.name }}Output
 
     // MARK: Environment
+
     private var subscriptions = Set<AnyCancellable>()
+
+    // MARK: Init
 
     init(interactor: {{ module_info.name }}Interacting,
          viewState: {{ module_info.name }}ViewState,
@@ -26,8 +30,14 @@ final class {{ module_info.name }}Presenter {
         self.viewState = viewState
         self.router = router
     }
+
+    // MARK: Private
 }
 
+// MARK: - {{ module_info.name }}ViewOutput
+
 extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput {}
+
+// MARK: - {{ module_info.name }}Input
 
 extension {{ module_info.name }}Presenter: {{ module_info.name }}Input {}
