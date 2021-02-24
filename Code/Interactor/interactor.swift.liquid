@@ -9,4 +9,8 @@
 import Combine
 import Foundation
 
-final class {{ module_info.name }}Interactor: {{ module_info.name }}Interacting {}
+final class {{ module_info.name }}Interactor {}
+
+// MARK: - {{ module_info.name }}Interacting
+
+extension {{ module_info.name }}Interactor: {{ module_info.name }}Interacting {}
