@@ -16,11 +16,9 @@ final class {{ module_info.name }}Configurator {
 
         let interactor = {{ module_info.name }}Interactor()
 
-        let presenter = {{ module_info.name }}Presenter(
-            interactor: interactor,
-            viewState: viewState,
-            router: router
-        )
+        let presenter = {{ module_info.name }}Presenter(interactor: interactor,
+                                                        viewState: viewState,
+                                                        router: router)
 
         let view = {{ module_info.name }}View(output: presenter, state: viewState)
 
