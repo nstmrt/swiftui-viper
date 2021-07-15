@@ -8,7 +8,7 @@
 
 import SMUIKit
 
-typealias {{ module_info.name }}Module = (view: Presenting, input: {{ module_info.name }}Input)
+typealias {{ module_info.name }}Module = (view: Presentable, input: {{ module_info.name }}Input)
 
 final class {{ module_info.name }}Configurator {
     func configure(router: {{ module_info.name }}Output) -> {{ module_info.name }}Module {
